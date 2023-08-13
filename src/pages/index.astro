@@ -1,0 +1,155 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import DiscountCard from "../components/DiscountCard.astro";
+import NewCard from "../components/NewCard.astro";
+---
+
+<Layout title="Welcome to Restaurant.">
+    <nav class="flex justify-between items-center pl-14 pr-24 bg-white h-24">
+        <div class="flex items-center space-x-1">
+            <img src="../../public/Logo.svg" alt="Logo" class="h-11 w-11" />
+            <div class="font-bold text-3xl">Restaurant</div>
+        </div>
+        <div>
+            <ul
+                class="flex space-x-16 text-base font-medium text-gray-900 items-center"
+            >
+                <li class="items-center hover:text-gray-500">
+                    <a href="/">Home</a>
+                </li>
+                <li class="items-center hover:text-gray-500">
+                    <a href="#">Shop</a>
+                </li>
+                <li class="items-center hover:text-gray-500">
+                    <a href="#">About</a>
+                </li>
+                <li class="items-center hover:text-gray-500">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center space-x-10">
+            <img
+                src="../../public/account-alert-outline.svg"
+                alt=""
+                class="h-6 w-6"
+            />
+            <img src="../../public/search.svg" alt="" class="h-6 w-6" />
+            <img src="../../public/heart.svg" alt="" class="h-6 w-6" />
+            <img
+                src="../../public/shopping-cart-outline.svg"
+                alt=""
+                class="h-6 w-6"
+            />
+        </div>
+    </nav>
+
+    <section class="h-[100vh] relative">
+        <div
+            class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('../../public/home-banner2.png');"
+        >
+            <div
+                class="absolute pt-16 px-10 pb-10 my-10 mx-14 top-4 right-0 w-[45%] transform translate-y-1/4 bg-[#FFF3E3] rounded shadow-sm"
+            >
+                <h5
+                    class="font-semibold text-sm mb-3"
+                    style="letter-spacing: 0.21em;"
+                >
+                    New Dishes
+                </h5>
+                <h2 class="font-bold text-5xl text-[#B88E2F] mb-3">
+                    Explore Our Delectable Dishes
+                </h2>
+                <p class="font-normal text-black mb-12">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Officiis, consectetur labore modi!
+                </p>
+                <button
+                    class="font-semibold text-sm uppercase px-14 py-6 bg-[#B88E2F] text-white border border-[#B88E2F] hover:bg-white hover:text-[#B88E2F] hover:border-[#B88E2F] transition-all duration-300"
+                >
+                    <a href="#">Order Now</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-14">
+        <div>
+            <h2 class="font-bold text-gray-900 text-3xl flex justify-center">
+                Browse The Range
+            </h2>
+            <p
+                class="font-normal text-gray-500 text-lg mb-16 flex justify-center"
+            >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+        <div class="flex justify-evenly mx-[70px]">
+            <div>
+                <img
+                    src="../../public/browse-group2.jpg"
+                    alt="Food"
+                    class="rounded-3xl"
+                />
+                <h2
+                    class="font-semibold text-gray-800 text-2xl pt-[30px] flex justify-center"
+                >
+                    Pizzas
+                </h2>
+            </div>
+            <div>
+                <img
+                    src="../../public/browse-group2.jpg"
+                    alt="Food"
+                    class="rounded-3xl"
+                />
+                <h2
+                    class="font-semibold text-gray-800 text-2xl pt-[30px] flex justify-center"
+                >
+                    Burgers
+                </h2>
+            </div>
+            <div>
+                <img
+                    src="../../public/browse-group2.jpg"
+                    alt="Food"
+                    class="rounded-3xl"
+                />
+                <h2
+                    class="font-semibold text-gray-800 text-2xl pt-[30px] flex justify-center"
+                >
+                    Drinks
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="pb-8">
+            <h2 class="font-bold text-gray-900 text-4xl flex justify-center">
+                Our Dishes
+            </h2>
+        </div>
+        <div class="flex justify-evenly mx-16">
+            <DiscountCard />
+            <Card />
+            <Card />
+            <Card />
+        </div>
+        <div class="flex justify-evenly mx-16">
+            <NewCard />
+            <Card />
+            <NewCard />
+            <Card />
+        </div>
+        <div class="flex justify-center">
+            <button
+                class="font-semibold text-sm px-[80px] py-3 bg-white text-[#B88E2F] border border-[#B88E2F] hover:bg-[#B88E2F] hover:text-white transition-all duration-300"
+            >
+                Show More
+            </button>
+        </div>
+    </section>
+</Layout>

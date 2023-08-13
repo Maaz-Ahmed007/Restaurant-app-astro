@@ -1,0 +1,53 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0 "
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+<style is:global>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+    * {
+        font-family: Poppins;
+    }
+    body {
+        margin: 0;
+        @apply leading-[normal] m-0;
+    }
+    *,
+    ::before,
+    ::after {
+        border-width: 0;
+    }
+    /* Hide the scrollbar while still allowing scrolling */
+    body::-webkit-scrollbar {
+        width: 0em; /* Adjust as needed */
+    }
+
+    body::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+</style>
